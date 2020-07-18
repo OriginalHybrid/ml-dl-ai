@@ -1,9 +1,23 @@
 ### Deep Learning Models
 ----------------------------------------
-#### RNN
+
+#### ANN
+
 ##### Usecase:
+Churm Modelling Problem
+Dataset:
+A Dataset of bank customers with their details and the decision whether they will leave the bank or not.
+(can also be applied to like should the customer get the loan or credit card approval etc)
+
+---------------------------------------------
+#### RNN
+
+##### Usecase:
+
 Predict the future pattern trend of google stock price using LSTM.
+
 **Approach:**
+
 Train LSTM on 5 years of stock price data and based on the training and corelation identified or captured by LSTM of Google stock price we will try to predict the first month of 2017, Jan.
 WE will not exactly predict the stock price, we will predict the upward or downward trend of google stock price
 
@@ -11,9 +25,13 @@ WE will not exactly predict the stock price, we will predict the upward or downw
 --------------------------------------------
 
 #### SOP
+
 ##### Usecase: 
+
 Fraud Detection
+
 **Approach:**
+
 Given Dataset containing the information of customers of the bank applying for and advanced credit card.
 Detect Potential fraud within these applications
 Give the explicit list of customers who potentially cheated
@@ -50,7 +68,9 @@ A15: 1,2 class attribute (formerly: +,-)
 ---------------------------------------------------
 
 #### Boltzmann Machine and Auto Encoder
-##### Usecase: 
+
+##### Usecase:
+ 
 Build a  recommender systems
 One that will predict a binary outcome yes/no whether the user will like the movie or not.
 And other that will predict the rating.

@@ -32,13 +32,13 @@ y_pred = sc_y.inverse_transform(regressor.predict(sc_X.transform([[6.5]])))
 
 print(y_pred)
 
-# Visualising the SVR results
+"""# Visualising the SVR results
 plt.scatter(X, y, color = 'red')
 plt.plot(X, regressor.predict(X), color = 'blue')
 plt.title('Truth or Bluff (SVR)')
 plt.xlabel('Position Level')
 plt.ylabel('Salary')
-plt.show()
+plt.show()"""
 
 # Visualising the SVR results (for higher resolution and smoother curve)
 X_grid = np.arange(min(X), max(X), 0.1)

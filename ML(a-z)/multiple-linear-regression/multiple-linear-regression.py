@@ -12,7 +12,7 @@ y = dataset.iloc[:, 4].values
 print("######################################################")
 
 # Encoding categorical data
-# encoding independent vatiable
+# encoding independent variable
 from sklearn.compose import ColumnTransformer
 from sklearn.preprocessing import OneHotEncoder
 ct = ColumnTransformer(transformers=[('encoder', OneHotEncoder(), [3])], remainder='passthrough')
@@ -38,7 +38,14 @@ regressor.fit(X_train, y_train)
 #Predicting the Test set results
 y_pred = regressor.predict(X_test)
 
-#Building optimal model using Backward Elimination
+# Building optimal model using Backward Elimination
+# Since in Above regression model we have used all independent variables as equal,
+# But what if there are some independent variable whose significance is higher that the others
+# and have greater impact on the dependent variable, while some are statistically insignificant.
+# So if we remove the statistically insignificant variable we would still have greaat prediction.
+# So the goal here is, to find an optimal team of independent variables such that each independent
+# variable has a powerful impact in determining the dependent variable profit which can be both posotive or negative
+# Hence we use backward elemination
 
 import statsmodels.api as sm
 X = np.append(arr = np.ones((50, 1)).astype(int), values = X , axis=1)
@@ -49,7 +56,7 @@ regressor_OLS.summary()
 
 X_opt = X[:, [0,1,3,4,5]]
 regressor_OLS = sm.OLS(endog=y, exog=X_opt).fit()
-regressor_OLS.summary()
+print(regressor_OLS.summary())
 
 X_opt = X[:, [0,3,4,5]]
 regressor_OLS = sm.OLS(endog=y, exog=X_opt).fit()
