@@ -41,7 +41,7 @@ print(cm)
 acs = accuracy_score(y_test, y_pred)
 print(acs)
 
-# Visualizing the training set results
+"""# Visualizing the training set results
 from matplotlib.colors import ListedColormap
 sc = StandardScaler()
 X_set, y_set = sc_X.inverse_transform(X_train), y_train
@@ -57,7 +57,7 @@ plt.title('Logistic Regression (Training set)')
 plt.xlabel('Age')
 plt.ylabel('Estimated Salary')
 plt.legend()
-plt.show()
+plt.show()"""
 
 # Visualizing the test set results
 from matplotlib.colors import ListedColormap
